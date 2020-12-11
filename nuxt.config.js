@@ -9,7 +9,13 @@ export default {
       { hid: 'description', name: 'description', content: 'Personal homepage on the web of rigma' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&family=JetBrains+Mono&family=Lato&display=swap'
+      }
     ]
   },
 
