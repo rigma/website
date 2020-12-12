@@ -20,6 +20,7 @@ export default Vue.extend({
 
 <style>
 @import '~/assets/css/colors.css';
+@import '~/assets/css/typography.css';
 
 html {
   background-color: var(--background-color);
@@ -37,23 +38,6 @@ html {
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
-  color: var(--title-color);
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.6em
-}
-
-h3 {
-  font-size: 1.4em;
 }
 
 .container {
