@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <Navbar />
+    <main>
+      <nuxt />
+    </main>
   </div>
 </template>
 
@@ -58,15 +61,28 @@ h3 {
   margin: 0 auto;
 }
 
+.container > main {
+  padding: 0 12px;
+  margin-top: 32px;
+}
+
 @media (min-width: 480px) {
   .container {
     min-width: 480px;
+  }
+
+  .container > main {
+    margin-top: 48px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+
+  .container > main {
+    margin-top: 64px;
   }
 }
 
