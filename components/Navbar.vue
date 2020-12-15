@@ -20,6 +20,14 @@
   </nav>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  name: 'Navbar'
+})
+</script>
+
 <style scoped>
 @import '~/assets/css/colors.css';
 

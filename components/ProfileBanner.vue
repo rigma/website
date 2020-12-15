@@ -1,9 +1,9 @@
 <template>
   <header>
     <picture class="profile">
-      <source type="image/webp" srcset="/rigma.webp" />
-      <source type="image/jpeg" srcset="/rigma.jpg" />
-      <img src="/rigma.jpg" alt="" />
+      <source type="image/webp" srcset="rigma.webp" />
+      <source type="image/jpeg" srcset="rigma.jpg" />
+      <img src="rigma.jpg" alt="" />
     </picture>
     <h1>
       👋 Bonjour !
@@ -13,6 +13,14 @@
     </h1>
   </header>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  name: 'ProfileBanner'
+})
+</script>
 
 <style scoped>
 header {
