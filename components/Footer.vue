@@ -3,13 +3,7 @@
     <i18n path="note" tag="p">
       <a href="https://nuxtjs.org" target="_blank">{{ $t('nuxt') }}</a>
     </i18n>
-    <form>
-      <select>
-        <option>a</option>
-        <option>b</option>
-      </select>
-      <button>submit</button>
-    </form>
+    <LocaleSelector />
   </footer>
 </template>
 
@@ -28,9 +22,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import LocaleSelector from './LocaleSelector.vue'
 
 export default Vue.extend({
-  name: 'Footer'
+  name: 'Footer',
+  components: {
+    LocaleSelector
+  }
 })
 </script>
 
