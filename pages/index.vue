@@ -32,6 +32,8 @@ export default {
 </script>
 
 <style scoped>
+@import '~/assets/css/typography.css';
+
 header {
   margin-bottom: 30px;
 }
