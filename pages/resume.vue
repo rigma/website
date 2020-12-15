@@ -1,8 +1,18 @@
 <template>
   <article>
-    🛠🧑‍💻 <span class="italic">Work in progress…</span>
+    <WorkInProgress />
   </article>
 </template>
+
+<script>
+import WorkInProgress from '@/components/WorkInProgress.vue'
+
+export default {
+  components: {
+    WorkInProgress
+  }
+}
+</script>
 
 <style scoped>
 article {

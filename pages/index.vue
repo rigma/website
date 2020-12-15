@@ -4,14 +4,13 @@
     <section v-if="presentation" class="content">
       <nuxt-content :document="presentation" />
     </section>
-    <section class="wip" v-else>
-      🛠🧑‍💻 <span class="italic">Work in progress…</span>
-    </section>
+    <WorkInProgress v-else />
   </article>
 </template>
 
 <script>
 import ProfileBanner from '@/components/ProfileBanner.vue'
+import WorkInProgress from '@/components/WorkInProgress.vue'
 
 export default {
   async asyncData ({ $content }) {
@@ -26,7 +25,8 @@ export default {
     return { presentation }
   },
   components: {
-    ProfileBanner
+    ProfileBanner,
+    WorkInProgress
   }
 }
 </script>
