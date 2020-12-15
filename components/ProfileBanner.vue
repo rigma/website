@@ -8,11 +8,22 @@
     <h1>
       👋 Bonjour !
       <small>
-        I'm Romain Failla.
+        {{ $t('identity') }}
       </small>
     </h1>
   </header>
 </template>
+
+<i18n>
+{
+  "en": {
+    "identity": "I'm Romain Failla."
+  },
+  "fr": {
+    "identity": "Je suis Romain Failla."
+  }
+}
+</i18n>
 
 <script lang="ts">
 import Vue from 'vue'
