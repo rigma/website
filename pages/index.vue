@@ -13,11 +13,12 @@ import ProfileBanner from '@/components/ProfileBanner.vue'
 import WorkInProgress from '@/components/WorkInProgress.vue'
 
 export default {
-  async asyncData ({ $content }) {
+  async asyncData ({ app, $content }) {
+    const locale = app.store.state.i18n.locale
     let presentation
 
     try {
-      presentation = await $content('presentation').fetch()
+      presentation = await $content(`${locale}/presentation`).fetch()
     } catch (err) {
       presentation = null
     }
