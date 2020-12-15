@@ -86,10 +86,6 @@ nav a {
   text-decoration: none;
 }
 
-.links a:hover {
-  filter: brightness(.25);
-}
-
 .links a.nuxt-link-exact-active {
   text-decoration: underline dotted;
 }

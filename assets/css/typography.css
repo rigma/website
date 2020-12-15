@@ -24,12 +24,12 @@ p {
   padding: 8px 0;
 }
 
-.nuxt-content a {
+a, .nuxt-content a {
   color: inherit;
   text-decoration: underline dotted;
 }
 
-.nuxt-content a:hover {
+a:hover, .nuxt-content a:hover {
   text-decoration: underline;
   filter: brightness(.25);
 }
