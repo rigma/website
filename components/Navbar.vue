@@ -57,9 +57,12 @@ nav a {
   padding: 0 8px;
 }
 
-
 .links a {
   text-decoration: none;
+}
+
+.links a:hover {
+  filter: brightness(.25);
 }
 
 .links a.nuxt-link-exact-active {
