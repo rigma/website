@@ -26,7 +26,9 @@ export default {
 
   loading: { color: '#fff' },
   css: [],
-  plugins: [],
+  plugins: [
+    '~/plugins/vue-i18n.js'
+  ],
 
   buildModules: [
     '@nuxt/typescript-build'
@@ -36,10 +38,12 @@ export default {
   ],
 
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     extend (config, ctx) {
+      config.module.rules.push({
+        resourceQuery: /blockType=i18n/,
+        type: 'javascript/auto',
+        loader: '@kazupon/vue-i18n-loader'
+      })
     }
   }
 }
