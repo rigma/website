@@ -8,17 +8,34 @@
     <ul class="links">
       <li>
         <nuxt-link to="/">
-          Home
+          {{ $t('links.home') }}
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/resume">
-          Resume
+          {{ $t('links.resume') }}
         </nuxt-link>
       </li>
     </ul>
   </nav>
 </template>
+
+<i18n>
+{
+  "en": {
+    "links": {
+      "home": "Home",
+      "resume": "Resume"
+    }
+  },
+  "fr": {
+    "links": {
+      "home": "Accueil",
+      "resume": "CV"
+    }
+  }
+}
+</i18n>
 
 <script lang="ts">
 import Vue from 'vue'
