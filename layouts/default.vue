@@ -4,18 +4,20 @@
     <main>
       <nuxt />
     </main>
+    <Footer />
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 
-export default Vue.extend({
+export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
-})
+}
 </script>
 
 <style>
