@@ -24,10 +24,14 @@ export const actions = {
 
     commit('put', { slug, content })
   },
-  async updateLocale ({ commit, state }, locale) {
+  async refreshCache ({ commit, rootGetters, state }) {
+    const locale = rootGetters['i18n/getCurrentLocale']()
+
     for (const slug in state.cache) {
       const content = await this.$content(`${locale}/${slug}`).fetch()
       commit('put', { slug, content })
     }
+
+    this._vm.$emit('content:refreshed')
   }
 }
