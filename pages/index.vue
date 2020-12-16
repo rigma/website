@@ -1,9 +1,7 @@
 <template>
   <article>
     <ProfileBanner />
-    <section v-if="presentation" class="content">
-      <nuxt-content :document="presentation" />
-    </section>
+    <nuxt-content v-if="presentation" :document="presentation" />
     <WorkInProgress v-else />
   </article>
 </template>
