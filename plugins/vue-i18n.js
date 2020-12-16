@@ -17,9 +17,8 @@ export const SUPPORTED_DIALECTS = [
 
 export default ({ app, store }) => {
   app.i18n = new VueI18n({
-    locale: navigator.language,
+    locale: store.state.i18n.locale,
     availableLocales: LOCALES,
-    fallbackLocale: 'en',
-    sync: true
+    fallbackLocale: 'en'
   })
 }

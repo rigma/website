@@ -1,13 +1,15 @@
+import { LOCALES } from '@/plugins/vue-i18n'
+
 export const state = () => ({
-  locale: 'en',
-  locales: ['en', 'fr']
+  locale: navigator.language,
 })
 
 export const mutations = {
   setLocale (state, locale) {
-    if (state.locales.includes(locale)) {
-      state.locale = locale
+    if (!LOCALES.includes(locale)) {
+      return
     }
+
+    state.locale = locale
   }
 }
-
