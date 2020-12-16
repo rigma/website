@@ -38,12 +38,4 @@ export default {
 header {
   margin-bottom: 30px;
 }
-
-.wip {
-  text-align: center;
-}
-
-.wip .italic {
-  font-style: italic;
-}
 </style>
