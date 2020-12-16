@@ -1,8 +1,13 @@
+import Vue from 'vue'
 import { LOCALES } from '@/plugins/vue-i18n'
 
 export const state = () => ({
   locale: navigator.language,
 })
+
+export const getters = {
+  getCurrentLocale: state => () => state.locale
+}
 
 export const mutations = {
   setLocale (state, locale) {
@@ -14,12 +19,13 @@ export const mutations = {
 }
 
 export const actions = {
-  updateLocale ({ commit }, locale) {
+  updateLocale ({ commit, dispatch }, locale) {
     if (!LOCALES.includes(locale)) {
       return
     }
 
     commit('setLocale', locale)
     commit('changeI18nLocale')
+    dispatch('content/updateLocale', locale, { root: true })
   }
 }
