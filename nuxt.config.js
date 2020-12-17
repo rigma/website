@@ -48,5 +48,11 @@ export default {
         loader: '@kazupon/vue-i18n-loader'
       })
     }
+  },
+  generate: {
+    routes: [
+      '/fr',
+      '/fr/resume'
+    ]
   }
 }
