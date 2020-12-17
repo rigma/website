@@ -1,19 +1,14 @@
 <template>
   <nav>
     <h1 class="title">
-      <nuxt-link to="/">
+      <nuxt-link :to="home">
         rigma's lair
       </nuxt-link>
     </h1>
     <ul class="links">
-      <li>
-        <nuxt-link to="/">
-          {{ $t('links.home') }}
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/resume">
-          {{ $t('links.resume') }}
+      <li v-for="(link, idx) in links" :key="`link-${idx}`">
+        <nuxt-link :to="link.path">
+          {{ link.title }}
         </nuxt-link>
       </li>
     </ul>
@@ -37,12 +32,26 @@
 }
 </i18n>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  name: 'Navbar'
-})
+<script>
+export default {
+  name: 'Navbar',
+  data () {
+    return {
+      targets: ['home', 'resume']
+    }
+  },
+  computed: {
+    home () {
+      return this.$i18n.locale === this.$i18n.fallbackLocale ? '/' : `/${this.$i18n.locale}`
+    },
+    links () {
+      return this.targets.map(target => ({
+        path: target === 'home' ? this.home : `/${this.$i18n.locale}/${target}`,
+        title: this.$t(`links.${target}`)
+      }))
+    }
+  },
+}
 </script>
 
 <style scoped>
