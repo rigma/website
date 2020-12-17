@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import { LOCALES } from '@/plugins/vue-i18n'
 
 export const state = () => ({
