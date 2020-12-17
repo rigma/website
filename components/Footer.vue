@@ -36,10 +36,15 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+@import '~/assets/css/layout.css';
+
 footer {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: var(--footer-height, 2.5rem);
   width: 100%;
 }
 

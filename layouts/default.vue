@@ -29,6 +29,7 @@ export default {
 
 <style>
 @import '~/assets/css/colors.css';
+@import '~/assets/css/layout.css';
 @import '~/assets/css/typography.css';
 
 html {
@@ -50,8 +51,10 @@ html {
 }
 
 .container {
+  position: relative;
   min-height: 100vh;
   margin: 0 auto;
+  padding-bottom: var(--footer-height, 2.5rem);
 }
 
 .container > main {
