@@ -8,7 +8,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import { recomputable, recompute } from '@/utils/recomputable'
 import ProfileBanner from '@/components/ProfileBanner.vue'
 import WorkInProgress from '@/components/WorkInProgress.vue'
 
