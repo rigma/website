@@ -1,9 +1,9 @@
 <template>
   <header>
     <picture class="profile">
-      <source type="image/webp" srcset="rigma.webp" />
-      <source type="image/jpeg" srcset="rigma.jpg" />
-      <img src="rigma.jpg" alt="" />
+      <source type="image/webp" srcset="/rigma.webp" />
+      <source type="image/jpeg" srcset="/rigma.jpg" />
+      <img src="/rigma.jpg" alt="" />
     </picture>
     <h1>
       👋 Bonjour !
