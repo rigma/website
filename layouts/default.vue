@@ -13,6 +13,13 @@ import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
+  head () {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      }
+    }
+  },
   components: {
     Navbar,
     Footer
