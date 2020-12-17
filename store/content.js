@@ -7,12 +7,18 @@ export const getters = {
 }
 
 export const mutations = {
+  clear (state) {
+    state.cache = {}
+  },
   put (state, { slug, content }) {
     state.cache[slug] = content
   }
 }
 
 export const actions = {
+  clearCache ({ commit }) {
+    commit('clear')
+  },
   async load ({ commit, rootGetters, state }, slug) {
     // Avoiding to load twice the same content
     if (state.cache[slug]) {

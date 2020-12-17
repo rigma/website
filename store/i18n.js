@@ -26,6 +26,5 @@ export const actions = {
 
     commit('setLocale', locale)
     commit('changeI18nLocale')
-    dispatch('content/refreshCache', null, { root: true })
   }
 }

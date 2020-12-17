@@ -48,6 +48,8 @@ export default {
         return
       }
 
+      this.$store.dispatch('content/clearCache')
+
       const currentPath = this.$route.fullPath
       if (currentLocale === this.$i18n.fallbackLocale) {
         return this.$router.push({
