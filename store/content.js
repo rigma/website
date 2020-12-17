@@ -31,7 +31,5 @@ export const actions = {
       const content = await this.$content(`${locale}/${slug}`).fetch()
       commit('put', { slug, content })
     }
-
-    this._vm.$emit('content:refreshed')
   }
 }
