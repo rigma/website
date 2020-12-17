@@ -57,9 +57,8 @@ export default {
         })
       }
 
-      this.$router.push({
-        path: `/${locale}${currentPath.slice(currentPath.indexOf(`/${currentLocale}`.length))}`
-      })
+      const path = `/${locale}${currentPath.slice(currentPath.indexOf(`/${currentLocale}`) + `/${currentLocale}`.length)}`
+      this.$router.push({ path })
     }
   }
 }
