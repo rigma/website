@@ -1,28 +1,24 @@
 <template>
   <article>
     <ProfileBanner />
-    <nuxt-content v-if="presentation" :document="presentation" />
+    <nuxt-content v-if="document" :document="document" />
     <WorkInProgress v-else />
   </article>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import { recomputable, recompute } from '@/utils/recomputable'
 import ProfileBanner from '@/components/ProfileBanner.vue'
 import WorkInProgress from '@/components/WorkInProgress.vue'
 
 export default {
-  async asyncData ({ app, $content }) {
-    const locale = app.store.state.i18n.locale
-    let presentation
-
-    try {
-      presentation = await $content(`${locale}/presentation`).fetch()
-    } catch (err) {
-      presentation = null
-    }
-
-    return { presentation }
+  async middleware ({ store }) {
+    await store.dispatch('content/load', 'presentation')
   },
+  computed: mapState({
+    document: state => state.content.cache['presentation']
+  }),
   components: {
     ProfileBanner,
     WorkInProgress
