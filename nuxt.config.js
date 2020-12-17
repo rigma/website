@@ -26,6 +26,9 @@ export default {
 
   loading: { color: '#fff' },
   css: [],
+  router: {
+    middleware: ['i18n']
+  },
   plugins: [
     '~/plugins/vue-i18n.js'
   ],
