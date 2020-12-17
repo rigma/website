@@ -3,7 +3,7 @@
     <label for="locale-select">
       {{ $t('label') }}
     </label>
-    <select id="locale-select" v-model="locale">
+    <select id="locale-select" @change="selectLocale" :value="locale">
       <option v-for="(dialect, idx) in dialects"
         :key="`dialect-${idx}`"
         :value="dialect.locale"
@@ -25,27 +25,42 @@
 }
 </i18n>
 
-<script lang="ts">
-import Vue from 'vue'
-import { mapGetters } from 'vuex'
+<script>
+import { mapState } from 'vuex'
 import { SUPPORTED_DIALECTS } from '@/plugins/vue-i18n'
 
-export default Vue.extend({
+export default {
   name: 'LocaleSelector',
   computed: {
     dialects () {
       return SUPPORTED_DIALECTS
     },
-    locale: {
-      get () {
-        return this.$store.state.i18n.locale
-      },
-      set (value) {
-        this.$store.dispatch('i18n/updateLocale', value)
+    ...mapState({
+      locale: state => state.i18n.locale
+    })
+  },
+  methods: {
+    selectLocale (event) {
+      const currentLocale = this.$store.getters['i18n/getCurrentLocale']()
+      const locale = event.target.value
+
+      if (currentLocale === locale) {
+        return
       }
+
+      const currentPath = this.$route.fullPath
+      if (currentLocale === this.$i18n.fallbackLocale) {
+        return this.$router.push({
+          path: `/${locale}${currentPath}`
+        })
+      }
+
+      this.$router.push({
+        path: `/${locale}${currentPath.slice(currentPath.indexOf(`/${currentLocale}`.length))}`
+      })
     }
   }
-})
+}
 </script>
 
 <style scoped>
