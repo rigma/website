@@ -25,6 +25,7 @@ export default {
   },
 
   loading: { color: '#fff' },
+  components: true,
   css: [],
   router: {
     middleware: ['i18n']
