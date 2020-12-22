@@ -7,7 +7,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import WorkInProgress from '@/components/WorkInProgress.vue'
 
 export default {
   async middleware ({ store }) {
@@ -15,12 +14,12 @@ export default {
   },
   computed: mapState({
     document: state => state.content.cache['resume']
-  }),
-  components: {
-    WorkInProgress
-  }
+  })
 }
 </script>
 
-<style scoped>
+<style>
+.nuxt-content h2 {
+  padding-bottom: 8px;
+}
 </style>

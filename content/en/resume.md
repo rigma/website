@@ -1,15 +1,49 @@
 ## Profile
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum, ante non lacinia tincidunt, sapien eros ultrices est, quis ullamcorper lorem nisl at dolor. Nullam gravida quis libero et vestibulum. Nunc congue velit eget magna luctus dignissim id nec magna. Curabitur lobortis ante urna. Sed lorem tellus, dictum non mauris a, placerat dapibus dui. Cras in augue mi. In iaculis in diam eu lobortis. Sed quam sem, aliquet at viverra sed, commodo vel ex. In vitae sem porta, sagittis quam rhoncus, porttitor nisi. Cras suscipit feugiat ex, quis commodo tortor. Curabitur id nulla non felis congue porta non et orci. Aenean a elementum risus. Vestibulum convallis ac enim vel imperdiet. Ut nec lacus at ligula sagittis tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean at augue sed turpis sagittis posuere.
+I am graduated sofware engineer from [Efrei Paris](https://eng.efrei.fr/) since 2018. I'm Romain, but I prefer to be named
+"rigma" on the web. In life, I'm seeing myself as a backend devloper, but I can use my skills for other kind of developement
+like frontend or system programming for instance.
+
+What more can I say? I'm also a passionate about science in general, as well as video games and cartoons. I like to make pastries
+too during my spare time, espacially [crêpes](https://en.wikipedia.org/wiki/Cr%C3%AApe).
+
+To reach me, you cand send me a message on [LinkedIn](https://linkedin.com/in/romain-failla) or an [email](mailto:rigbuntu@gmail.com).
+
+You can find my academic and work experience below or you can also [download a version of it](/static/ROMAIN_FAILLA_DEV_BACKEND_EN.pdf).
 
 ## Work Experience
 
-Cras lacinia, diam sit amet efficitur pretium, magna quam laoreet arcu, nec facilisis lectus turpis feugiat nisl. Aliquam tincidunt urna et justo venenatis suscipit eu sit amet tortor. In hac habitasse platea dictumst. Nulla finibus mi sit amet sem bibendum ullamcorper ut eu odio. Donec pretium, libero nec accumsan mattis, neque eros gravida elit, vitae iaculis nulla metus et lorem. Donec vitae laoreet tortor. Nam ut metus libero. Donec finibus odio nec turpis fermentum tincidunt. Curabitur libero ligula, volutpat a scelerisque eget, fringilla eget nisl. Curabitur ut pulvinar dolor. Aenean sit amet lacinia ligula.
+<experience from="2018-10-30" to="2019-12-09">
+  <template #title>Junior Backend Developer — Ornikar</template>
+  <template #details>
+    Development and maintenance of REST and GraphQL API with Laravel. Monitoring of the infrastructure hosted on AWS using Datadog and Sentry.<br />
+    Writing technical tasks and specifications.
+  </template>
+</experience>
+
+<experience from="2018-02-01" to="2018-08-30">
+  <template #title>End-of-study Internship — Astrakan</template>
+  <template #details>
+    Software development for Microsoft HoloLens headset with the Unity engine.<br />
+    Git workflow management of the developer team.
+  </template>
+</experience>
+
+<experience from="2017-04-15" to="2017-08-30" no-separator>
+  <template #title>Student-Intern — University of Nevada in Las Vegas</template>
+  <template #details>
+    Involved in the development of an experimental virtual reality driving simulator made with Unity.<br />
+    3D replicas of prototypes from the civil engineering laboratory integration into a simulation
+  </template>
+</experience>
 
 ## Education
 
-Cras dignissim eget risus vitae rutrum. Aliquam eu tortor in ex viverra tincidunt. Morbi tellus dolor, mattis id ipsum at, laoreet vulputate nisl. Nullam quis tortor cursus, varius ante sed, consequat libero. Nam ac tristique lectus, a vestibulum urna. Praesent tincidunt enim nunc, a lobortis tellus faucibus nec. Curabitur venenatis, nunc et maximus cursus, nisi leo sodales odio, ut cursus elit dui sed ex. Sed suscipit tortor orci, a vulputate odio sollicitudin vel. Nam justo quam, luctus maximus egestas in, vehicula ut enim. In hac habitasse platea dictumst. Quisque molestie vulputate pharetra. Quisque eu vehicula quam. Vivamus ultricies turpis quis dui facilisis ornare. Nullam quis pharetra erat.
+<formation end="2018-11-01" title="Efrei Paris, Villejuif — Engineering Degree of Efrei Paris" details="Computer vision and Virtual Reality major.">
+</formation>
 
-## Contact
+<formation start="2017-10-01" end="2018-02-01" title="End-of-study Project — Société Générale" details="API prototyping to make energy consumption audits of websites.">
+</formation>
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ipsum mauris, sagittis pulvinar suscipit ac, vestibulum a sem. Integer auctor ante a sem iaculis, vel blandit libero convallis. In dictum feugiat lorem. Curabitur tempor consequat magna quis viverra. Vestibulum viverra augue ornare arcu tempus, eget aliquam mi tempor. Donec maximus semper mattis. Mauris sed ornare augue. Ut feugiat velit aliquet dignissim scelerisque. Integer at metus nec massa dictum blandit. Pellentesque congue enim nec mauris efficitur interdum. In et dui ac nisl molestie vestibulum pretium et ex.
+<formation end="2016-06-01" title="UPEM, Marne-la-Vallée — Mathematics and Computer Science Bachelor’s Degree" no-separator>
+</formation>
