@@ -2,7 +2,8 @@
   <section>
     <div class="timetable">
       <span class="date">{{ start  }}</span> ~ <span class="date">{{ end }}</span>
-      <span class="duration">({{ duration }})</span>
+      <span class="duration mobile">({{ duration }})</span>
+      <span class="duration">{{ duration }}</span>
     </div>
     <div class="details">
       <h3>
@@ -99,7 +100,7 @@ section {
 .timetable .date {
   color: var(--title-color);
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  font-size: .9em;
+  font-size: .7em;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -111,6 +112,14 @@ section {
 .timetable .duration {
   color: var(--title-color);
   font-size: .5em;
+}
+
+.timetable .duration {
+  display: none;
+}
+
+.timetable .duration.mobile {
+  display: inline;
 }
 
 .details {
@@ -130,9 +139,18 @@ section {
   font-style: italic;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
+  .timetable {
+    min-width: 128px;
+  }
+
   .timetable .duration {
+    display: inline;
     font-size: .75em;
+  }
+
+  .timetable .duration.mobile {
+    display: none;
   }
 }
 </style>
