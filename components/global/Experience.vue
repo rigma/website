@@ -94,7 +94,7 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-width: min-content;
+  min-width: 64px;
 }
 
 .timetable .date {
@@ -132,6 +132,7 @@ section {
 }
 
 .details p {
+  text-align: left;
   padding: 0;
 }
 
