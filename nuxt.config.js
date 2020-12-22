@@ -41,6 +41,10 @@ export default {
     '@nuxt/content'
   ],
 
+  content: {
+    liveEdit: false
+  },
+
   build: {
     extend (config, ctx) {
       config.module.rules.push({
