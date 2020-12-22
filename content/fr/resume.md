@@ -7,9 +7,9 @@ sur la toile je préfère qu'on me nomme "rigma". Dans la vie, je préfère me v
 Que dire de plus ? Je suis également un passionné de sciences en général, ainsi que de jeux vidéos et dessins animés. J'aime
 également faire de la pâtisserie à mes heures perdues, notamment des crêpes.
 
-Pour me contacter, vous pouvez m'envoyez un message sur [LinkedIn](https://www.linkedin.com/in/romain-failla) ou m'envoyer un [courriel](mailto:rigbuntu@gmail.com).
+Pour me contacter, vous pouvez m'envoyez un message sur [LinkedIn](https://www.linkedin.com/in/romain-failla) ou m'envoyer [un courriel](mailto:rigbuntu@gmail.com).
 
-Vous retrouverez mon parcours ci-dessous ou vous pouvez également le [télécharger](/static/ROMAIN_FAILLA_DEV_BACKEND_FR.pdf).
+Vous retrouverez mon parcours ci-dessous ou vous pouvez également <a target="_blank" href="/ROMAIN_FAILLA_DEV_BACKEND_FR.pdf" rel="noopener" download>le télécharger</a>.
 
 ## Expérience
 
