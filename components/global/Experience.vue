@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="experience">
     <div class="timetable">
       <span class="date">{{ start  }}</span> ~ <span class="date">{{ end }}</span>
       <span class="duration mobile">({{ duration }})</span>
