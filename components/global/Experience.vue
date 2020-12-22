@@ -1,22 +1,25 @@
 <template>
   <section class="experience">
-    <div class="timetable">
-      <span class="date">{{ start  }}</span> ~ <span class="date">{{ end }}</span>
-      <span class="duration mobile">({{ duration }})</span>
-      <span class="duration">{{ duration }}</span>
+    <div class="layout">
+      <div class="timetable">
+        <span class="date">{{ start  }}</span> ~ <span class="date">{{ end }}</span>
+        <span class="duration mobile">({{ duration }})</span>
+        <span class="duration">{{ duration }}</span>
+      </div>
+      <div class="details">
+        <h3>
+          <slot name="title" />
+        </h3>
+        <p>
+          <slot name="details">
+            <span class="no-details">
+              {{ $t('noDetails') }}
+            </span>
+          </slot>
+        </p>
+      </div>
     </div>
-    <div class="details">
-      <h3>
-        <slot name="title" />
-      </h3>
-      <p>
-        <slot name="details">
-          <span class="no-details">
-            {{ $t('noDetails') }}
-          </span>
-        </slot>
-      </p>
-    </div>
+    <hr v-if="!noSeparator" />
   </section>
 </template>
 
@@ -49,6 +52,10 @@ export default {
     to: {
       type: String,
       default: undefined
+    },
+    'no-separator': {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -85,8 +92,17 @@ export default {
 
 section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}
+
+.layout {
+  display: flex;
   flex-direction: row;
-  padding: 8px 0;
+  margin-bottom: 8px;
+  width: 100%;
 }
 
 .timetable {
@@ -138,6 +154,12 @@ section {
 
 .details .no-details {
   font-style: italic;
+}
+
+hr {
+  border: none;
+  border-bottom: dashed 1px var(--text-color);
+  width: 72px;
 }
 
 @media (min-width: 768px) {
