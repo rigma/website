@@ -1,0 +1,7 @@
+version: 2
+updates:
+  - package_ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
