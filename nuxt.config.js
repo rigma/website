@@ -26,11 +26,14 @@ export default {
 
   loading: { color: '#fff' },
   components: true,
-  css: [],
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
   router: {
     middleware: ['i18n']
   },
   plugins: [
+    '~/plugins/fontawesome.js',
     '~/plugins/vue-i18n.js'
   ],
 
