@@ -25,12 +25,10 @@
 }
 </i18n>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   name: 'ProfileBanner'
-})
+}
 </script>
 
 <style scoped>

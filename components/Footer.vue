@@ -23,16 +23,15 @@
 }
 </i18n>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 import LocaleSelector from './LocaleSelector.vue'
 
-export default Vue.extend({
+export default {
   name: 'Footer',
   components: {
     LocaleSelector
   }
-})
+}
 </script>
 
 <style scoped>

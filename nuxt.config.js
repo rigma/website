@@ -34,9 +34,7 @@ export default {
     '~/plugins/vue-i18n.js'
   ],
 
-  buildModules: [
-    '@nuxt/typescript-build'
-  ],
+  buildModules: [],
   modules: [
     '@nuxt/content'
   ],
