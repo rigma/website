@@ -10,13 +10,13 @@
         <h3>
           <slot name="title" />
         </h3>
-        <p>
-          <slot name="details">
+        <slot name="details">
+          <p>
             <span class="no-details">
               {{ $t('noDetails') }}
             </span>
-          </slot>
-        </p>
+          </p>
+        </slot>
       </div>
     </div>
     <hr v-if="!noSeparator" />
