@@ -3,7 +3,7 @@
     <picture class="profile">
       <source type="image/webp" srcset="/rigma.webp" />
       <source type="image/jpeg" srcset="/rigma.jpg" />
-      <img src="/rigma.jpg" alt="" />
+      <img src="/rigma.jpg" :alt="$t('alt')" />
     </picture>
     <h1>
       👋 Bonjour !
@@ -17,9 +17,11 @@
 <i18n>
 {
   "en": {
+    "alt": "A photo of myself taken in front of a japanese advertisement panel.",
     "identity": "I'm Romain Failla."
   },
   "fr": {
+    "alt": "Une photo de moi prise devant un panneau de publicité japonais.",
     "identity": "Je suis Romain Failla."
   }
 }
