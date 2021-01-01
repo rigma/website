@@ -41,6 +41,7 @@
         no-separator
       />
     </article>
+    <SkillCollection />
   </div>
   <WorkInProgress v-else />
 </template>
@@ -122,6 +123,7 @@
 import { mapState } from 'vuex'
 import Experience from '@/components/Experience.vue'
 import Formation from '@/components/Formation.vue'
+import SkillCollection from '@/components/SkillCollection.vue'
 
 export default {
   async middleware ({ store }) {
@@ -132,7 +134,8 @@ export default {
   }),
   components: {
     Experience,
-    Formation
+    Formation,
+    SkillCollection
   }
 }
 </script>
@@ -140,5 +143,9 @@ export default {
 <style>
 h2 {
   padding-bottom: 8px;
+}
+
+.skill-collection {
+  margin-bottom: 32px;
 }
 </style>
