@@ -41,7 +41,7 @@
         no-separator
       />
     </article>
-    <SkillCollection />
+    <SkillCollection :skills="skills" />
   </div>
   <WorkInProgress v-else />
 </template>
@@ -128,6 +128,11 @@ import SkillCollection from '@/components/SkillCollection.vue'
 export default {
   async middleware ({ store }) {
     await store.dispatch('content/load', 'profile')
+  },
+  async asyncData ({ $content }) {
+    const content = await $content('skills').fetch()
+
+    return { skills: content.skills }
   },
   computed: mapState({
     profile: state => state.content.cache['profile']

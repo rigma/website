@@ -1,0 +1,107 @@
+{
+  "skills": [
+    {
+      "id": "php",
+      "title": "PHP"
+    },
+    {
+      "id": "node",
+      "title": "Node.js"
+    },
+    {
+      "id": "cs",
+      "title": "C#",
+      "kind": "code"
+    },
+    {
+      "id": "python",
+      "title": "Python"
+    },
+    {
+      "id": "rust",
+      "title": "Rust"
+    },
+    {
+      "id": "golang",
+      "title": "Go",
+      "kind": "code"
+    },
+    {
+      "id": "js",
+      "title": "Javascript"
+    },
+    {
+      "id": "ts",
+      "title": "Typescript",
+      "kind": "code"
+    },
+    {
+      "id": "vuejs",
+      "title": "Vue.js"
+    },
+    {
+      "id": "react",
+      "title": "React"
+    },
+    {
+      "id": "jira",
+      "title": "Jira"
+    },
+    {
+      "id": "trello",
+      "title": "Trello"
+    },
+    {
+      "id": "git-alt",
+      "title": "Git"
+    },
+    {
+      "id": "database",
+      "title": "PostgreSQL"
+    },
+    {
+      "id": "database",
+      "title": "MySQL"
+    },
+    {
+      "id": "database",
+      "title": "SQLite"
+    },
+    {
+      "id": "database",
+      "title": "MongoDB"
+    },
+    {
+      "id": "docker",
+      "title": "Docker"
+    },
+    {
+      "id": "github",
+      "title": "GitHub Actions"
+    },
+    {
+      "id": "sentry",
+      "title": "Sentry",
+      "kind": "devops"
+    },
+    {
+      "id": "datadog",
+      "title": "Datadog",
+      "kind": "devops"
+    },
+    {
+      "id": "kubernetes",
+      "title": "Kubernetes",
+      "kind": "devops"
+    },
+    {
+      "id": "aws",
+      "title": "AWS"
+    },
+    {
+      "id": "gcloud",
+      "title": "Google Cloud",
+      "kind": "devops"
+    }
+  ]
+}
