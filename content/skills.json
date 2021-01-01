@@ -9,6 +9,10 @@
       "title": "Node.js"
     },
     {
+      "id": "laravel",
+      "title": "Laravel"
+    },
+    {
       "id": "cs",
       "title": "C#",
       "kind": "code"
