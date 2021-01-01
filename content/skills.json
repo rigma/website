@@ -56,20 +56,24 @@
       "title": "Git"
     },
     {
-      "id": "database",
-      "title": "PostgreSQL"
+      "id": "psql",
+      "title": "PostgreSQL",
+      "icon": ["fas", "database"]
     },
     {
-      "id": "database",
-      "title": "MySQL"
+      "id": "mysql",
+      "title": "MySQL",
+      "icon": ["fas", "database"]
     },
     {
-      "id": "database",
-      "title": "SQLite"
+      "id": "sqlite",
+      "title": "SQLite",
+      "icon": ["fas", "database"]
     },
     {
-      "id": "database",
-      "title": "MongoDB"
+      "id": "mongodb",
+      "title": "MongoDB",
+      "icon": ["fas", "database"]
     },
     {
       "id": "docker",
