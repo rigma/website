@@ -4,7 +4,7 @@
     :disabled="disabled"
     @click="toggle"
   >
-    <FontAwesomeIcon :icon="icon" /> {{ title }}
+    <FontAwesomeIcon :icon="displayIcon" /> {{ title }}
   </button>
 </template>
 
@@ -26,6 +26,10 @@ export default {
       type: String,
       required: true
     },
+    icon: {
+      type: [String, Array],
+      default: undefined
+    },
     kind: {
       type: String,
       default: undefined,
@@ -44,7 +48,11 @@ export default {
     }
   },
   computed: {
-    icon () {
+    displayIcon () {
+      if (this.icon) {
+        return this.icon
+      }
+
       if (!library.definitions.fab || Object.keys(library.definitions.fab).indexOf(this.id) === -1) {
         switch (this.getKind()) {
           case 'code':

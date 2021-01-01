@@ -20,7 +20,8 @@
         :key="`skill-${skill.id}`"
         :id="skill.id"
         :title="skill.title"
-        :kind="skill.kind || null"
+        :icon="skill.icon || undefined"
+        :kind="skill.kind || undefined"
       />
     </div>
     <div v-else class="no-skills">
@@ -186,6 +187,7 @@ section {
 
 .collection > * {
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .collection :last-child {
