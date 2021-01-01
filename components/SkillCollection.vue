@@ -64,11 +64,7 @@ export default {
     skills: {
       type: Array,
       default () {
-        return [
-          { id: 'docker', title: 'Docker' },
-          { id: 'laravel', title: 'Laravel' },
-          { id: 'yolo', title: 'Yola', kind: 'fun' }
-        ]
+        return []
       }
     }
   },
