@@ -124,7 +124,7 @@ button {
   transition: all 200ms ease-out;
 }
 
-button:active, button.active, button:active + button.active {
+button:active:not(:disabled), button.active, button:active:not(:disabled) + button.active {
   background: #555;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #fff;
