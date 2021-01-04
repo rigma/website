@@ -1,6 +1,6 @@
 <template>
   <button role="presentation"
-    :class="{ active, disabled }"
+    :class="{ active: shouldBeActive, disabled }"
     :disabled="disabled"
     @click="toggle"
   >
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import { library } from '@/plugins/fontawesome'
 
 function randomIcon () {
@@ -67,7 +68,19 @@ export default {
       }
 
       return ['fab', this.id]
+    },
+    ...mapState({
+      shouldBeActive (state) {
+        return this.active || state.skills.selected.indexOf(this.id) !== -1
+      }
+    })
+  },
+  created () {
+    if (this.disabled) {
+      return
     }
+    
+    this.active = this.$store.state.skills.selected.indexOf(this.id) !== -1
   },
   methods: {
     getKind () {
@@ -83,6 +96,11 @@ export default {
       }
 
       this.active = !this.active
+      if (this.active) {
+        this.$store.commit('skills/select', this.id)
+      } else {
+        this.$store.commit('skills/unselect', this.id)
+      }
     }
   }
 }
@@ -106,7 +124,7 @@ button {
   transition: all 200ms ease-out;
 }
 
-button:active:not(:disabled), button.active:not(:disabled), button:active:not(:disabled) + button.active:not(:disabled) {
+button:active, button.active, button:active + button.active {
   background: #555;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #fff;
