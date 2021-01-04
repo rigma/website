@@ -166,6 +166,7 @@ section {
 .details .skills {
   align-items: flex-start;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   padding: 8px 0;
 }
