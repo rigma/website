@@ -1,11 +1,11 @@
 <template>
   <section class="experience">
     <div class="layout">
-      <div class="timetable">
+      <section class="timetable">
         <span class="date">{{ start  }}</span> ~ <span class="date">{{ end }}</span>
         <span class="duration mobile">({{ duration }})</span>
         <span class="duration">{{ duration }}</span>
-      </div>
+      </section>
       <div class="details">
         <h3>
           <slot name="title" />
@@ -17,6 +17,9 @@
             </span>
           </p>
         </slot>
+        <section class="skills">
+          <slot name="skills" />
+        </section>
       </div>
     </div>
     <hr v-if="!noSeparator" />
@@ -41,6 +44,7 @@
 <script>
 import { format, formatDuration, intervalToDuration, parse } from 'date-fns'
 import { fr } from 'date-fns/locale'
+import Skill from './Skill.vue'
 
 export default {
   name: 'Experience',
@@ -83,6 +87,9 @@ export default {
         locale: this.$i18n.locale === 'fr' ? fr : undefined
       })
     }
+  },
+  components: {
+    Skill
   }
 }
 </script>
@@ -154,6 +161,22 @@ section {
 
 .details .no-details {
   font-style: italic;
+}
+
+.details .skills {
+  align-items: flex-start;
+  flex-direction: row;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.details .skills > * {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.details .skills :last-child {
+  margin-right: auto;
 }
 
 hr {
