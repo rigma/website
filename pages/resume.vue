@@ -1,10 +1,10 @@
 <template>
   <div v-if="profile">
-    <article>
+    <article id="profile">
       <h2>{{ $t('titles.profile') }}</h2>
       <nuxt-content :document="profile" />
     </article>
-    <article>
+    <article id="experience">
       <h2>{{ $t('titles.workExperience') }}</h2>
       <Experience from="2018-10-30" to="2019-12-09">
         <template #title>{{ $t('experiences.ornikar.title') }}</template>
@@ -25,7 +25,7 @@
         </template>
       </Experience>
     </article>
-    <article>
+    <article id="education">
       <h2>{{ $t('titles.education') }}</h2>
       <Formation end="2018-11-01"
         :title="$t('education.efrei.title')"
@@ -41,7 +41,13 @@
         no-separator
       />
     </article>
-    <SkillCollection :skills="skills" />
+    <article id="skills">
+      <h2>{{ $t('titles.skills') }}</h2>
+      <p>
+        {{ $t('skillIntro') }}
+      </p>
+      <SkillCollection :skills="skills" />
+    </article>
   </div>
   <WorkInProgress v-else />
 </template>
@@ -52,7 +58,8 @@
     "titles": {
       "profile": "Profile",
       "workExperience": "Work Experience",
-      "education": "Education"
+      "education": "Education",
+      "skills": "Skills"
     },
     "experiences": {
       "ornikar": {
@@ -80,13 +87,15 @@
       "upem": {
         "title": "UPEM, Marne-la-Vallée — Mathematics and Computer Science Bachelor’s Degree"
       }
-    }
+    },
+    "skillIntro": "Here I have gathered a collection of my skills in computer science. You can filter it and select a specific skill to see with which experience it's bound to."
   },
   "fr": {
     "titles": {
       "profile": "Présentation",
       "workExperience": "Expérience",
-      "education": "Formation"
+      "education": "Formation",
+      "skills": "Compétences"
     },
     "experiences": {
       "ornikar": {
@@ -114,7 +123,8 @@
       "upem": {
         "title": "UPEM, Marne-la-Vallée — Licence mathématiques-informatique"
       }
-    }
+    },
+    "skillIntro": "J'ai rassemblé ici un ensemble de mes compétences en informatique. Vous pouvez filtrer cette liste et sélectionner une compétence particulière pour voir avec quelle expérience elle est liée."
   }
 }
 </i18n>
@@ -150,7 +160,11 @@ h2 {
   padding-bottom: 8px;
 }
 
-.skill-collection {
+#skills {
   margin-bottom: 32px;
+}
+
+#skills p {
+  margin-bottom: 16px;
 }
 </style>
