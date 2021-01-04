@@ -8,7 +8,7 @@
       <h2>{{ $t('titles.workExperience') }}</h2>
       <Experience from="2018-10-30" to="2019-12-09">
         <template #title>{{ $t('experiences.ornikar.title') }}</template>
-        <template #details v-html="$t('experiences.ornikar.details')">
+        <template #details>
           <p v-html="$t('experiences.ornikar.details')" />
         </template>
         <template #skills>
@@ -25,7 +25,7 @@
         </template>
       </Experience>
       <Experience from="2018-02-01" to="2018-08-30">
-        <template #title>{{ $t('experiences.astrakhan.details') }}</template>
+        <template #title>{{ $t('experiences.astrakhan.title') }}</template>
         <template #details>
           <p v-html="$t('experiences.astrakhan.details')" />
         </template>
