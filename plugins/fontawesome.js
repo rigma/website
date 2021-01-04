@@ -15,7 +15,8 @@ import {
   faReact,
   faRust,
   faTrello,
-  faVuejs,
+  faUnity,
+  faVuejs
 } from '@fortawesome/free-brands-svg-icons'
 import Vue from 'vue'
 
@@ -38,6 +39,7 @@ library.add(
   faRust,
   faTerminal,
   faTrello,
+  faUnity,
   faVuejs
 )
 
