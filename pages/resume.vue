@@ -11,17 +11,39 @@
         <template #details v-html="$t('experiences.ornikar.details')">
           <p v-html="$t('experiences.ornikar.details')" />
         </template>
+        <template #skills>
+          <Skill id="php" title="PHP" disabled />
+          <Skill id="laravel" title="Laravel" disabled />
+          <Skill id="node" title="Node.js" disabled />
+          <Skill id="mysql" title="MySQL" icon="database" disabled />
+          <Skill id="psql" title="PostgreSQL" icon="database" disabled />
+          <Skill id="datadog" title="Datadog" kind="devops" disabled />
+          <Skill id="sentry" title="Sentry" kind="devops" disabled />
+          <Skill id="aws" title="AWS" disabled />
+          <Skill id="gcloud" title="Google Cloud" disabled />
+          <Skill id="jira" title="Jira" disabled />
+        </template>
       </Experience>
       <Experience from="2018-02-01" to="2018-08-30">
         <template #title>{{ $t('experiences.astrakhan.details') }}</template>
         <template #details>
           <p v-html="$t('experiences.astrakhan.details')" />
         </template>
+        <template #skills>
+          <Skill id="unity" title="Unity" disabled />
+          <Skill id="cs" title="C#" kind="code" disabled />
+          <Skill id="js" title="Javascript" disabled />
+          <Skill id="trello" title="Trello" disabled />
+        </template>
       </Experience>
       <Experience from="2017-04-15" to="2017-08-30" no-separator>
         <template #title>{{ $t('experiences.unlv.title') }}</template>
         <template #details>
           <p v-html="$t('experiences.unlv.details')" />
+        </template>
+        <template #skills>
+          <Skill id="unity" title="Unity" disabled />
+          <Skill id="cs" title="C#" kind="code" disabled />
         </template>
       </Experience>
     </article>
