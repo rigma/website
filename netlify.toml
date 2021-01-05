@@ -1,0 +1,13 @@
+[[redirects]]
+  from = "/ROMAIN_FAILLA_DEV_BACKEND_EN.pdf"
+  to = "/ROMAIN_FAILLA_DEV_BACKEND_EN.pdf"
+  status = 200
+  force = true
+  headers = { Content-Disposition = 'attachment; filename="ROMAIN_FAILLA_DEV_BACKEND_EN.pdf"', Content-Type = "application/pdf" }
+
+[[redirects]]
+  from = "/ROMAIN_FAILLA_DEV_BACKEND_FR.pdf"
+  to = "/ROMAIN_FAILLA_DEV_BACKEND_FR.pdf"
+  status = 200
+  force = true
+  headers = { Content-Disposition = 'attachment; filename="ROMAIN_FAILLA_DEV_BACKEND_FR.pdf"', Content-Type = "application/pdf" }
