@@ -2,24 +2,8 @@
 for = "/ROMAIN_FAILLA_DEV_BACKEND_EN.pdf"
 [headers.values]
 content-disposition = 'attachment; filename="ROMAIN_FAILLA_DEV_BACKEND_EN.pdf"'
-content-type = 'application/json'
 
 [[headers]]
 for = "/ROMAIN_FAILLA_DEV_BACKEND_FR.pdf"
 [headers.values]
 content-disposition = 'attachment; filename="ROMAIN_FAILLA_DEV_BACKEND_FR.pdf"'
-content-type = 'application/json'
-
-[[redirects]]
-from = "/ROMAIN_FAILLA_DEV_BACKEND_EN.pdf"
-to = "/ROMAIN_FAILLA_DEV_BACKEND_EN.pdf"
-status = 200
-force = true
-headers = { Content-Disposition = 'attachment; filename="ROMAIN_FAILLA_DEV_BACKEND_EN.pdf"', Content-Type = "application/pdf" }
-
-[[redirects]]
-from = "/ROMAIN_FAILLA_DEV_BACKEND_FR.pdf"
-to = "/ROMAIN_FAILLA_DEV_BACKEND_FR.pdf"
-status = 200
-force = true
-headers = { Content-Disposition = 'attachment; filename="ROMAIN_FAILLA_DEV_BACKEND_FR.pdf"', Content-Type = "application/pdf" }
