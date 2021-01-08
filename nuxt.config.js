@@ -56,6 +56,7 @@ export default {
     }
   },
   generate: {
+    fallback: 'error.html',
     routes: [
       '/fr',
       '/fr/resume'
