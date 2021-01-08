@@ -1,5 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Node template
+# Local Netlify folder
+.netlify
+
 # Logs
 /logs
 *.log
@@ -89,6 +90,8 @@ sw.*
 # Vim swap files
 *.swp
 
-# Local Netlify folder
-.netlify
-
+# Local SSL certificates
+*.ext
+*.csr
+*.crt
+*.key

@@ -1,0 +1,15 @@
+.github/
+.netlify/
+docker/
+.dockerignore
+.editorconfig
+.gitattributes
+.gitignore
+*.ext
+*.csr
+*.crt
+*.key
+Dockerfile
+README.md
+jsconfig.js
+netlify.toml
