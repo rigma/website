@@ -37,7 +37,9 @@ export default {
     '~/plugins/vue-i18n.js'
   ],
 
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/router-extras'
+  ],
   modules: [
     '@nuxt/content'
   ],
