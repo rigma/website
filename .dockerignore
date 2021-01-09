@@ -1,0 +1,12 @@
+.git/
+.github/
+.netlify/
+node_modules/
+.dockerignore
+.editorconfig
+.gitattributes
+.gitignore
+Dockerfile
+jsconfig.json
+netlify.toml
+README.md
