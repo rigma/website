@@ -1,0 +1,67 @@
+name: Pushing a Github tag
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  releaser:
+    name: Generate GitHub release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - id: generate_asset
+        name: Generate release archive
+        run: |
+          npm install
+          npm run generate
+
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,' | sed -e 's/^v//')
+
+          mv dist
+          zip -r ${{ github.repository_name }}-$VERSION.zip *
+          mv ./${{ github.repository_name }}-$VERSION.zip ..
+
+          cd ..
+          echo "::set-output name=version::$VERSION"
+      - id: create_release
+        name: Create GitHub release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: rigma's lair - ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload GitHub release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          asset_content_type: application/zip
+          asset_path: ./${{ github.repository_name }}-${{ steps.generate_asset.outputs.version }}.zip
+          asset_name: ${{ github.repository_name }}-${{ steps.generate_asset.outputs.version }}.zip
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+ 
+  docker-tagging:
+    name: Tagging latest Docker image with published version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Log into GitHub Container repository
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.CR_PAT }}
+      - id: extracter
+        name: Extracting package version
+        uses: koj-co/package-version-action@v1.0.1
+      - name: Tagging and pushing latest Docker image
+        run: |
+          docker pull ghcr.io/${{ github.repository }}:latest
+          docker tag ${{ github.repository }} ${{ github.repository }}:${{ steps.extracter.output.package-version }}
+          docker push ghcr.io/${{ github.repository }}:${{ steps.extracter.output.package-version }}
