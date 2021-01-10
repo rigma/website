@@ -21,8 +21,8 @@ jobs:
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,' | sed -e 's/^v//')
 
           mv dist
-          zip -r ${{ github.repository_name }}-$VERSION.zip *
-          mv ./${{ github.repository_name }}-$VERSION.zip ..
+          zip -r website-$VERSION.zip *
+          mv ./website-$VERSION.zip ..
 
           cd ..
           echo "::set-output name=version::$VERSION"
@@ -42,8 +42,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           asset_content_type: application/zip
-          asset_path: ./${{ github.repository_name }}-${{ steps.generate_asset.outputs.version }}.zip
-          asset_name: ${{ github.repository_name }}-${{ steps.generate_asset.outputs.version }}.zip
+          asset_path: ./website-${{ steps.generate_asset.outputs.version }}.zip
+          asset_name: website-${{ steps.generate_asset.outputs.version }}.zip
           upload_url: ${{ steps.create_release.outputs.upload_url }}
  
   docker-tagging:
