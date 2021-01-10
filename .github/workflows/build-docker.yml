@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    name: Build and push Docker image to GHCR
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,5 +23,5 @@ jobs:
         with:
           push: true
           tags: |
-            ${{ github.repository_name }}:latest
-            ${{ github.repository_name }}:${{ github.sha }}
+            ${{ github.repository }}:latest
+            ${{ github.repository }}:${{ github.sha }}
